@@ -7,7 +7,14 @@
 const config = {
   // All imported modules in your tests should be mocked automatically
   // automock: false,
-
+  testEnvironment: 'jsdom',
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/src/$1',
+  },
+  transform: {
+    '^.+\\.(js|jsx|ts|tsx)$': ['@babel/jest'],
+  },
   // Stop running tests after `n` failures
   // bail: 0,
 
