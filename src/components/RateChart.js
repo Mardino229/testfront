@@ -31,6 +31,7 @@ export default function RateChart({data}) {
 
     const options = {
         responsive: true,
+        maintainAspectRatio: false,
         interaction: {
             mode: 'nearest',
             intersect: false,
@@ -52,7 +53,7 @@ export default function RateChart({data}) {
         },
     };
 
-    return <div className="md:w-1/3 w-full h-full">
-            <Line data={chartData} options={{ ...options, maintainAspectRatio: false }} />
+    return <div className="md:w-1/3 w-full h-128">
+            <Line data={chartData} options={options} />
         </div>
 }

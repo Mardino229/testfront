@@ -51,148 +51,151 @@ export default function OrderTable() {
 
     return (
         <div className="overflow-x-auto">
-            <table className="min-w-full border-collapse border border-gray-300">
-                <thead>
-                {table.getHeaderGroups().map(headerGroup => (
-                    <tr key={headerGroup.id}>
-                        {headerGroup.headers.map(header => (
-                            <th
-                                key={header.id}
-                                className="border border-gray-300 px-4 py-2 text-left bg-gray-100"
-                            >
-                                {flexRender(header.column.columnDef.header, header.getContext())}
-                            </th>
-                        ))}
-                    </tr>
-                ))}
-                </thead>
-                <tbody>
-                {isPending? (
-                        <>
-                            <tr>
-                                <td><Skeleton /></td>
-                                <td><Skeleton /></td>
-                                <td><Skeleton /></td>
-                                <td><Skeleton /></td>
-                                <td><Skeleton /></td>
-                            </tr>
-                            <tr>
-                                <td><Skeleton /></td>
-                                <td><Skeleton /></td>
-                                <td><Skeleton /></td>
-                                <td><Skeleton /></td>
-                                <td><Skeleton /></td>
-                            </tr>
-                            <tr>
-                                <td><Skeleton /></td>
-                                <td><Skeleton /></td>
-                                <td><Skeleton /></td>
-                                <td><Skeleton /></td>
-                                <td><Skeleton /></td>
-                            </tr>
-                            <tr>
-                                <td><Skeleton /></td>
-                                <td><Skeleton /></td>
-                                <td><Skeleton /></td>
-                                <td><Skeleton /></td>
-                                <td><Skeleton /></td>
-                            </tr>
-                            <tr>
-                                <td><Skeleton /></td>
-                                <td><Skeleton /></td>
-                                <td><Skeleton /></td>
-                                <td><Skeleton /></td>
-                                <td><Skeleton /></td>
-                            </tr>
-                            <tr>
-                                <td><Skeleton /></td>
-                                <td><Skeleton /></td>
-                                <td><Skeleton /></td>
-                                <td><Skeleton /></td>
-                                <td><Skeleton /></td>
-                            </tr>
-                            <tr>
-                                <td><Skeleton /></td>
-                                <td><Skeleton /></td>
-                                <td><Skeleton /></td>
-                                <td><Skeleton /></td>
-                                <td><Skeleton /></td>
-                            </tr>
-                            <tr>
-                                <td><Skeleton /></td>
-                                <td><Skeleton /></td>
-                                <td><Skeleton /></td>
-                                <td><Skeleton /></td>
-                                <td><Skeleton /></td>
-                            </tr>
-                            <tr>
-                                <td><Skeleton /></td>
-                                <td><Skeleton /></td>
-                                <td><Skeleton /></td>
-                                <td><Skeleton /></td>
-                                <td><Skeleton /></td>
-                            </tr>
-                            <tr>
-                                <td><Skeleton /></td>
-                                <td><Skeleton /></td>
-                                <td><Skeleton /></td>
-                                <td><Skeleton /></td>
-                                <td><Skeleton /></td>
-                            </tr>
-                        </>
-                    )
-
-                    :table.getRowModel().rows.map(row => (
-                        <tr
-                            key={row.id}
-                            className={row.original.type === 'bid' ? 'bg-green-50' : 'bg-red-50'}
-                        >
-                            {row.getVisibleCells().map(cell => (
-                                <td key={cell.id} className="border border-gray-300 px-4 py-2">
-                                    {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                                </td>
+            <div>
+                <table className="min-w-full border-collapse border border-gray-300">
+                    <thead>
+                    {table.getHeaderGroups().map(headerGroup => (
+                        <tr key={headerGroup.id}>
+                            {headerGroup.headers.map(header => (
+                                <th
+                                    key={header.id}
+                                    className="border border-gray-300 px-4 py-2 text-left bg-gray-100"
+                                >
+                                    {flexRender(header.column.columnDef.header, header.getContext())}
+                                </th>
                             ))}
                         </tr>
                     ))}
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                    {isPending? (
+                            <>
+                                <tr>
+                                    <td><Skeleton /></td>
+                                    <td><Skeleton /></td>
+                                    <td><Skeleton /></td>
+                                    <td><Skeleton /></td>
+                                    <td><Skeleton /></td>
+                                </tr>
+                                <tr>
+                                    <td><Skeleton /></td>
+                                    <td><Skeleton /></td>
+                                    <td><Skeleton /></td>
+                                    <td><Skeleton /></td>
+                                    <td><Skeleton /></td>
+                                </tr>
+                                <tr>
+                                    <td><Skeleton /></td>
+                                    <td><Skeleton /></td>
+                                    <td><Skeleton /></td>
+                                    <td><Skeleton /></td>
+                                    <td><Skeleton /></td>
+                                </tr>
+                                <tr>
+                                    <td><Skeleton /></td>
+                                    <td><Skeleton /></td>
+                                    <td><Skeleton /></td>
+                                    <td><Skeleton /></td>
+                                    <td><Skeleton /></td>
+                                </tr>
+                                <tr>
+                                    <td><Skeleton /></td>
+                                    <td><Skeleton /></td>
+                                    <td><Skeleton /></td>
+                                    <td><Skeleton /></td>
+                                    <td><Skeleton /></td>
+                                </tr>
+                                <tr>
+                                    <td><Skeleton /></td>
+                                    <td><Skeleton /></td>
+                                    <td><Skeleton /></td>
+                                    <td><Skeleton /></td>
+                                    <td><Skeleton /></td>
+                                </tr>
+                                <tr>
+                                    <td><Skeleton /></td>
+                                    <td><Skeleton /></td>
+                                    <td><Skeleton /></td>
+                                    <td><Skeleton /></td>
+                                    <td><Skeleton /></td>
+                                </tr>
+                                <tr>
+                                    <td><Skeleton /></td>
+                                    <td><Skeleton /></td>
+                                    <td><Skeleton /></td>
+                                    <td><Skeleton /></td>
+                                    <td><Skeleton /></td>
+                                </tr>
+                                <tr>
+                                    <td><Skeleton /></td>
+                                    <td><Skeleton /></td>
+                                    <td><Skeleton /></td>
+                                    <td><Skeleton /></td>
+                                    <td><Skeleton /></td>
+                                </tr>
+                                <tr>
+                                    <td><Skeleton /></td>
+                                    <td><Skeleton /></td>
+                                    <td><Skeleton /></td>
+                                    <td><Skeleton /></td>
+                                    <td><Skeleton /></td>
+                                </tr>
+                            </>
+                        )
 
-            {/* Pagination */}
-            {isSuccess &&
-                <div className="mt-2 flex justify-center items-center gap-4">
-                <button
-                    onClick={() => table.setPageIndex(0)}
-                    disabled={!table.getCanPreviousPage()}
-                    className="px-3 py-1 border rounded disabled:opacity-50"
-                >
-                    {'<<'}
-                </button>
-                <button
-                    onClick={() => table.previousPage()}
-                    disabled={!table.getCanPreviousPage()}
-                    className="px-3 py-1 border rounded disabled:opacity-50"
-                >
-                    {'<'}
-                </button>
-                <span>
+                        :table.getRowModel().rows.map(row => (
+                            <tr
+                                key={row.id}
+                                className={row.original.type === 'bid' ? 'bg-green-50' : 'bg-red-50'}
+                            >
+                                {row.getVisibleCells().map(cell => (
+                                    <td key={cell.id} className="border border-gray-300 px-4 py-2">
+                                        {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                                    </td>
+                                ))}
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+                {isSuccess &&
+                    <div className="mt-2 flex justify-center items-center gap-4">
+                        <button
+                            onClick={() => table.setPageIndex(0)}
+                            disabled={!table.getCanPreviousPage()}
+                            className="px-3 py-1 border rounded disabled:opacity-50"
+                        >
+                            {'<<'}
+                        </button>
+                        <button
+                            onClick={() => table.previousPage()}
+                            disabled={!table.getCanPreviousPage()}
+                            className="px-3 py-1 border rounded disabled:opacity-50"
+                        >
+                            {'<'}
+                        </button>
+                        <span>
           Page {table.getState().pagination.pageIndex + 1} sur {table.getPageCount()}
         </span>
-                <button
-                    onClick={() => table.nextPage()}
-                    disabled={!table.getCanNextPage()}
-                    className="px-3 py-1 border rounded disabled:opacity-50"
-                >
-                    {'>'}
-                </button>
-                <button
-                    onClick={() => table.setPageIndex(table.getPageCount() - 1)}
-                    disabled={!table.getCanNextPage()}
-                    className="px-3 py-1 border rounded disabled:opacity-50"
-                >
-                    {'>>'}
-                </button>
+                        <button
+                            onClick={() => table.nextPage()}
+                            disabled={!table.getCanNextPage()}
+                            className="px-3 py-1 border rounded disabled:opacity-50"
+                        >
+                            {'>'}
+                        </button>
+                        <button
+                            onClick={() => table.setPageIndex(table.getPageCount() - 1)}
+                            disabled={!table.getCanNextPage()}
+                            className="px-3 py-1 border rounded disabled:opacity-50"
+                        >
+                            {'>>'}
+                        </button>
+                    </div>
+                }
             </div>
-            }
+
+            {/* Pagination */}
+
         </div>
     );
 }
