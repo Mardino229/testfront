@@ -73,7 +73,7 @@ export default function TradeForm({ balance, setOpen }) {
                             </select>
                             {errors.type && <p className="text-red-600">Ce champ est requis</p>}
                         </div>
-                        <div className="flex gap-3 justify-between w-full">
+                        <div className="flex gap-3 flex-wrap md:flex-nowrap justify-between w-full">
                             <div className="sm:col-span-4 w-full">
                                 <label htmlFor="username" className="block text-sm/6 font-medium text-gray-900">
                                     Prix
