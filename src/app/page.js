@@ -32,7 +32,16 @@ export default function Home() {
                   </div>
                   <OrderTable />
               </div>
-              {isSuccess && <RateChart data={data} />}
+              {isPending && <div className="relative md:w-1/3 w-full h-64 bg-white border border-gray-200">
+                  {/* Axe Y (vertical) */}
+                  <div className="absolute left-0 bottom-0 h-full w-1 bg-gray-300"></div>
+                  {/* Axe X (horizontal) */}
+                  <div className="absolute left-0 bottom-0 w-full h-1 bg-gray-300"></div>
+                  {/* Placeholder pour les données */}
+                  <div className="absolute left-1 bottom-1 right-0 top-0 bg-gray-200 animate-pulse"></div>
+              </div>}
+              {isSuccess && <RateChart isPending={isPending} data={data} />}
+              {isError && <p>Erreur dans le chargement du graphe</p>}
           </div>
           <Dialog open={open} onClose={setOpen} className="relative z-10">
               <DialogBackdrop
